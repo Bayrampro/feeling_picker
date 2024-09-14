@@ -16,6 +16,14 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ), 
+      ),
       body: TableCalendar(
         focusedDay: _focusedDay,
         locale: 'ru_RU',
