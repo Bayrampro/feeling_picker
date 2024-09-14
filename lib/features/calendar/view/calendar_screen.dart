@@ -16,27 +16,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Календарь'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.calendar_view_month),
-            onPressed: () {
-              setState(() {
-                _calendarFormat = CalendarFormat.month;
-              });
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.abc),
-            onPressed: () {
-              setState(() {
-                _calendarFormat = CalendarFormat.twoWeeks;
-              });
-            },
-          ),
-        ],
-      ),
       body: TableCalendar(
         focusedDay: _focusedDay,
         locale: 'ru_RU',
